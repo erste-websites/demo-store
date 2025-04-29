@@ -1,30 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Your Cart</title>
-  <link rel="stylesheet" href="styles.css">
-  <script src="script.js" defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Cart - Erste Maison</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="cart.html">Cart</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </header>
+    <!-- Header Section -->
+    <header>
+        <div class="logo">
+            <h1>Erste Maison</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="cart.html">Cart</a></li>
+            </ul>
+        </nav>
+    </header>
 
-  <section>
-    <h2>Your Cart</h2>
-    <div id="cart-list"></div>
-    <div id="total"></div>
-    <button onclick="checkout()">Proceed to Checkout</button>
-  </section>
+    <!-- Cart Section -->
+    <section id="cart">
+        <h2>Your Cart</h2>
+        <div id="cart-items"></div>
+        <p id="total-price"></p>
+    </section>
 
-  <footer>
-    <p>© 2023 Erste Maison. All Rights Reserved.</p>
-  </footer>
+    <footer>
+        <p>&copy; 2025 Erste Maison - Luxury Home Decor</p>
+    </footer>
+
+    <script>
+        // Function to display cart items and total price
+        window.onload = function() {
+            let cart = JSON.parse(localStorage.getItem('cart'));
+            let cartItemsContainer = document.getElementById('cart-items');
+            let totalPrice = 0;
+
+            if (cart.length > 0) {
+                cart.forEach(item => {
+                    const itemDiv = document.createElement('div');
+                    itemDiv.innerHTML = `<p>${item.name} - $${item.price}</p>`;
+                    cartItemsContainer.appendChild(itemDiv);
+                    totalPrice += item.price;
+                });
+                document.getElementById('total-price').innerHTML = `Total: $${totalPrice}`;
+            } else {
+                cartItemsContainer.innerHTML = "<p>Your cart is empty!</p>";
+            }
+        };
+    </script>
 </body>
 </html>
