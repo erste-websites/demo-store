@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 function addToCart(productId, productName, productPrice) {
   let cart = JSON.parse(localStorage.getItem('cart')) || [];
-  
+
   // Check if product already exists
   const existingProduct = cart.find(item => item.productId === productId);
   if (existingProduct) {
@@ -23,7 +23,7 @@ function updateCartDisplay() {
   const totalElement = document.getElementById('total');
 
   if (!cartList || !totalElement) return; // not on cart page
-  
+
   let cart = JSON.parse(localStorage.getItem('cart')) || [];
   cartList.innerHTML = '';
 
