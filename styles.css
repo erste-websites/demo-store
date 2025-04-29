@@ -1,147 +1,165 @@
-/* === General Styles === */
+/* Reset some default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Base styles */
 body {
-    font-family: 'Segoe UI', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #ffffff; /* White */
-    color: #1e1e1e;
+    font-family: 'Arial', sans-serif;
+    background-color: #fff;
+    color: #333;
+    line-height: 1.6;
 }
 
-a {
-    text-decoration: none;
-    color: #a64ac9; /* Purple accent */
-}
-
-ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
-
-/* === Header === */
 header {
-    background-color: #2e003e; /* Deep Purple */
-    color: #ffffff;
-    padding: 20px 40px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    background-color: #6a1b9a; /* Purple */
+    padding: 20px;
+    text-align: center;
 }
 
 header .logo h1 {
-    margin: 0;
-    font-size: 28px;
-    font-weight: 700;
-    color: #ff6ec7; /* Pink logo text */
+    color: #fff;
+    font-size: 2.5rem;
 }
 
 nav ul {
-    display: flex;
-    gap: 20px;
+    list-style: none;
+    margin-top: 10px;
 }
 
-nav a {
-    color: #ffffff;
-    font-weight: 500;
+nav ul li {
+    display: inline-block;
+    margin: 0 15px;
 }
 
-/* === Hero Section === */
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ff4081; /* Pink hover */
+}
+
+/* Hero section (optional for homepage) */
 .hero {
-    background-image: url('images/hero.jpg');
-    background-size: cover;
-    background-position: center;
+    background: linear-gradient(rgba(106, 27, 154, 0.7), rgba(255, 64, 129, 0.7)), url('images/hero.jpg') center/cover no-repeat;
     height: 80vh;
     display: flex;
     align-items: center;
     justify-content: center;
+    color: #fff;
     text-align: center;
-    position: relative;
-    color: #ffffff;
-}
-
-.hero::after {
-    content: '';
-    position: absolute;
-    top: 0; left: 0;
-    height: 100%; width: 100%;
-    background: rgba(46, 0, 62, 0.6); /* Purple overlay */
-}
-
-.hero .hero-content {
-    position: relative;
-    z-index: 1;
 }
 
 .hero h2 {
-    font-size: 48px;
-    margin-bottom: 10px;
-}
-
-.hero p {
-    font-size: 18px;
+    font-size: 3rem;
     margin-bottom: 20px;
 }
 
-/* === Buttons === */
-.btn {
-    background-color: #ff6ec7; /* Pink button */
-    color: #ffffff;
-    border: none;
-    padding: 12px 24px;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 6px;
-    transition: background 0.3s;
+.hero p {
+    font-size: 1.5rem;
 }
 
-.btn:hover {
-    background-color: #e055b3;
-}
-
-/* === Product Grid === */
-.product-grid {
+/* Products Grid */
+.products {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 30px;
     padding: 40px;
-    background-color: #fdf8ff; /* Subtle light purple */
 }
 
 .product-card {
-    background-color: #ffffff;
-    border-radius: 10px;
+    background: #f3f3f3;
+    border-radius: 8px;
     overflow: hidden;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
-    transition: transform 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .product-card:hover {
-    transform: translateY(-6px);
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(106, 27, 154, 0.2);
 }
 
 .product-card img {
     width: 100%;
-    height: 260px;
+    height: 200px;
     object-fit: cover;
 }
 
-.product-card h4 {
-    margin: 16px;
-    font-size: 20px;
-    color: #2e003e;
-}
-
-.product-card p {
-    margin: 0 16px 16px;
-    font-size: 16px;
-    color: #666;
-}
-
-/* === Footer === */
-footer {
-    background-color: #2e003e;
-    color: #ffffff;
-    text-align: center;
+.product-card .info {
     padding: 20px;
-    font-size: 14px;
+    text-align: center;
+}
+
+.product-card .info h3 {
+    color: #6a1b9a;
+    margin-bottom: 10px;
+}
+
+.product-card .info p {
+    margin-bottom: 15px;
+}
+
+.product-card .btn {
+    display: inline-block;
+    background-color: #6a1b9a;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.product-card .btn:hover {
+    background-color: #ff4081;
+}
+
+/* Footer */
+footer {
+    background-color: #6a1b9a;
+    color: #fff;
+    text-align: center;
+    padding: 15px;
+    margin-top: 40px;
+}
+
+/* Cart page */
+#cart {
+    padding: 40px;
+}
+
+#cart-items div {
+    background: #f3f3f3;
+    margin-bottom: 15px;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+#total-price {
+    margin-top: 20px;
+    font-size: 1.5rem;
+    color: #6a1b9a;
+    text-align: center;
+}
+
+/* Simple animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.products, #cart {
+    animation: fadeIn 1s ease;
 }
