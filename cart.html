@@ -1,4 +1,166 @@
-<ul>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart | Erste Maison</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <meta name="description" content="View your shopping cart at Erste Maison.">
+</head>
+<body>
+    <div class="loader">
+        <div class="loader-logo">
+            <span>E</span>
+            <span>M</span>
+        </div>
+    </div>
+
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <a href="index.html">Erste Maison</a>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#featured-products">Shop</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-icons">
+                <a href="#" class="search-toggle"><i class="fas fa-search"></i></a>
+                <a href="cart.html" class="cart-icon active"><i class="fas fa-shopping-bag"></i><span class="cart-count">0</span></a>
+                <button class="mobile-menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+        <div class="search-overlay">
+            <div class="container">
+                <form class="search-form">
+                    <input type="text" placeholder="Search for products..." autocomplete="off">
+                    <button type="submit"><i class="fas fa-search"></i></button>
+                </form>
+                <button class="search-close"><i class="fas fa-times"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <div class="mobile-menu">
+        <div class="container">
+            <ul class="mobile-nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#featured-products">Shop</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <main>
+        <section class="cart-section">
+            <div class="container">
+                <h1 class="page-title">Shopping Cart</h1>
+                
+                <div class="cart-content" id="cart-content">
+                    <div class="empty-cart-message" id="empty-cart-message">
+                        <i class="fas fa-shopping-cart"></i>
+                        <h2>Your cart is empty</h2>
+                        <p>Looks like you haven't added any items to your cart yet.</p>
+                        <a href="index.html#featured-products" class="btn primary-btn">Continue Shopping</a>
+                    </div>
+                
+                    <div class="cart-with-items" id="cart-with-items">
+                        <div class="cart-grid">
+                            <div class="cart-items">
+                                <div class="cart-header">
+                                    <span class="product-col">Product</span>
+                                    <span class="price-col">Price</span>
+                                    <span class="quantity-col">Quantity</span>
+                                    <span class="total-col">Total</span>
+                                </div>
+                                
+                                <div class="cart-items-list" id="cart-items-list">
+                                    <!-- Cart items will be dynamically loaded here -->
+                                  </div>
+                                
+                                <div class="cart-actions">
+                                    <div class="coupon-form">
+                                        <input type="text" placeholder="Coupon code" class="coupon-input">
+                                        <button class="btn secondary-btn">Apply Coupon</button>
+                                    </div>
+                                    <button class="btn text-btn" id="clear-cart"><i class="fas fa-trash-alt"></i> Clear Cart</button>
+                                </div>
+                            </div>
+                            
+                            <div class="cart-summary">
+                                <h3>Cart Summary</h3>
+                                <div class="summary-item subtotal">
+                                    <span>Subtotal</span>
+                                    <span id="cart-subtotal">$0.00</span>
+                                </div>
+                                <div class="summary-item shipping">
+                                    <span>Shipping</span>
+                                    <span id="cart-shipping">$0.00</span>
+                                </div>
+                                <div class="summary-divider"></div>
+                                <div class="summary-item total">
+                                    <span>Total</span>
+                                    <span id="cart-total">$0.00</span>
+                                </div>
+                                <div class="summary-message">
+                                    <p>Shipping & taxes calculated at checkout</p>
+                                </div>
+                                <button class="btn primary-btn checkout-btn">Proceed to Checkout</button>
+                                <div class="continue-shopping">
+                                    <a href="index.html#featured-products"><i class="fas fa-arrow-left"></i> Continue Shopping</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="recently-viewed">
+            <div class="container">
+                <h2 class="section-title">Recently Viewed</h2>
+                <div class="products-grid" id="recently-viewed-container">
+                    <!-- Recently viewed products will be dynamically loaded here -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Erste Maison</h3>
+                    <p>Premium home decor for the modern lifestyle. Elevate your space with our curated collection of luxury pieces.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Navigation</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#featured-products">Shop</a></li>
+                        <li><a href="cart.html">Cart</a></li>
+                        <li><a href="index.html#about">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Customer Care</h3>
+                    <ul>
                         <li><a href="#">Shipping & Returns</a></li>
                         <li><a href="#">FAQ</a></li>
                         <li><a href="#">Privacy Policy</a></li>
