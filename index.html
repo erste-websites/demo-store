@@ -1,4 +1,175 @@
-</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Erste Maison | Luxury Home Decor</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <meta name="description" content="Erste Maison - Premium home decor and accessories for the modern home.">
+</head>
+<body>
+    <div class="loader">
+        <div class="loader-logo">
+            <span>E</span>
+            <span>M</span>
+        </div>
+    </div>
+
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <a href="index.html">Erste Maison</a>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="#featured-products">Shop</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-icons">
+                <a href="#" class="search-toggle"><i class="fas fa-search"></i></a>
+                <a href="cart.html" class="cart-icon"><i class="fas fa-shopping-bag"></i><span class="cart-count">0</span></a>
+                <button class="mobile-menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+        <div class="search-overlay">
+            <div class="container">
+                <form class="search-form">
+                    <input type="text" placeholder="Search for products..." autocomplete="off">
+                    <button type="submit"><i class="fas fa-search"></i></button>
+                </form>
+                <button class="search-close"><i class="fas fa-times"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <div class="mobile-menu">
+        <div class="container">
+            <ul class="mobile-nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#featured-products">Shop</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="fade-in">Elevate Your Space</h1>
+                    <p class="fade-in">Curated luxury for the modern home.</p>
+                    <a href="#featured-products" class="btn primary-btn fade-in">Shop Now</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="featured-products" class="featured-products">
+            <div class="container">
+                <h2 class="section-title">Featured Collections</h2>
+                <div class="category-filters">
+                    <button class="category-btn active" data-category="all">All</button>
+                    <button class="category-btn" data-category="lighting">Lighting</button>
+                    <button class="category-btn" data-category="furniture">Furniture</button>
+                    <button class="category-btn" data-category="decor">Decor</button>
+                </div>
+                <div class="products-grid" id="products-container">
+                    <!-- Products will be dynamically loaded here -->
+                </div>
+            </div>
+        </section>
+
+        <section class="promotion">
+            <div class="container">
+                <div class="promotion-content">
+                    <h2>New Season Collection</h2>
+                    <p>Discover our latest arrivals designed to transform your space.</p>
+                    <a href="#featured-products" class="btn secondary-btn">View Collection</a>
+                </div>
+            </div>
+        </section>
+        <section id="about" class="about">
+            <div class="container">
+                <div class="about-grid">
+                    <div class="about-image">
+                        <img src="/api/placeholder/800/600" alt="Erste Maison interior" />
+                    </div>
+                    <div class="about-content">
+                        <h2 class="section-title">About Erste Maison</h2>
+                        <p>Founded on the principles of exceptional design and quality craftsmanship, Erste Maison brings luxury into everyday living. Our curated collections blend timeless elegance with contemporary aesthetics.</p>
+                        <p>Each piece is thoughtfully selected to elevate your space, creating environments that inspire and comfort. From statement furniture to delicate accessories, our products are designed to transform houses into homes.</p>
+                        <a href="contact.html" class="btn text-btn">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="instagram-feed">
+            <div class="container">
+                <h2 class="section-title">Follow Our Journey</h2>
+                <p class="section-subtitle">@erstemaison</p>
+                <div class="instagram-grid">
+                    <div class="instagram-item">
+                        <img src="/api/placeholder/300/300" alt="Instagram post" />
+                        <div class="instagram-overlay">
+                            <i class="fab fa-instagram"></i>
+                        </div>
+                    </div>
+                    <div class="instagram-item">
+                        <img src="/api/placeholder/300/300" alt="Instagram post" />
+                        <div class="instagram-overlay">
+                            <i class="fab fa-instagram"></i>
+                        </div>
+                    </div>
+                    <div class="instagram-item">
+                        <img src="/api/placeholder/300/300" alt="Instagram post" />
+                        <div class="instagram-overlay">
+                            <i class="fab fa-instagram"></i>
+                        </div>
+                    </div>
+                    <div class="instagram-item">
+                        <img src="/api/placeholder/300/300" alt="Instagram post" />
+                        <div class="instagram-overlay">
+                            <i class="fab fa-instagram"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="newsletter">
+            <div class="container">
+                <div class="newsletter-content">
+                    <h2>Stay Inspired</h2>
+                    <p>Subscribe to our newsletter for exclusive offers and design inspiration.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your email address" required>
+                        <button type="submit" class="btn primary-btn">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Erste Maison</h3>
+                    <p>Premium home decor for the modern lifestyle. Elevate your space with our curated collection of luxury pieces.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-pinterest-p"></i></a>
+    </div>
                 </div>
                 <div class="footer-col">
                     <h3>Navigation</h3>
@@ -45,4 +216,4 @@
 
     <script src="js/index.js"></script>
 </body>
-</html>
+</html>                    
