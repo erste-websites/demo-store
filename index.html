@@ -1,40 +1,88 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Erste Maison</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Erste Maison - Luxury Home Decor</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <header>
-    <div class="logo"><h1>Erste Maison</h1></div>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="cart.html">Cart</a></li>
-      </ul>
-    </nav>
+    <div class="header-container">
+      <div class="logo">
+        <h1>Erste Maison</h1>
+      </div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="product.html">Products</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="cart.html">Cart</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
-  <section class="product-grid">
-    <div class="product" onclick="location.href='product.html?id=1'">
-      <img src="images/chandelier.jpg" alt="Chandelier">
-      <h3>Crystal Chandelier</h3>
-      <p>$2500</p>
+  <section class="hero">
+    <div class="hero-text">
+      <h2>Elevate Your Home Aesthetic</h2>
+      <p>Explore our curated collection of luxury decor pieces crafted to inspire sophistication.</p>
+      <a href="product.html" class="btn-primary">Shop Now</a>
     </div>
-    <div class="product" onclick="location.href='product.html?id=2'">
-      <img src="images/vase.jpg" alt="Marble Vase">
-      <h3>Marble Vase</h3>
-      <p>$1500</p>
+  </section>
+
+  <section class="features">
+    <div class="feature">
+      <img src="images/free-shipping.svg" alt="Free Shipping">
+      <h3>Free Shipping</h3>
+      <p>Enjoy complimentary shipping on all orders over $100.</p>
     </div>
-    <!-- Add more products similarly -->
+    <div class="feature">
+      <img src="images/premium-quality.svg" alt="Premium Quality">
+      <h3>Premium Quality</h3>
+      <p>Each product is crafted with precision and quality materials.</p>
+    </div>
+    <div class="feature">
+      <img src="images/support.svg" alt="Customer Support">
+      <h3>24/7 Support</h3>
+      <p>Our concierge team is always here to assist you.</p>
+    </div>
+  </section>
+
+  <section class="collection-preview">
+    <h2>Featured Collection</h2>
+    <div class="product-grid">
+      <div class="product-card">
+        <img src="images/product1.jpg" alt="Product 1">
+        <h3>Crystal Chandelier</h3>
+        <p>$2,500</p>
+        <a href="product.html?product=1" class="btn-secondary">View Details</a>
+      </div>
+      <div class="product-card">
+        <img src="images/product2.jpg" alt="Product 2">
+        <h3>Velvet Armchair</h3>
+        <p>$1,200</p>
+        <a href="product.html?product=2" class="btn-secondary">View Details</a>
+      </div>
+      <div class="product-card">
+        <img src="images/product3.jpg" alt="Product 3">
+        <h3>Modern Marble Table</h3>
+        <p>$3,800</p>
+        <a href="product.html?product=3" class="btn-secondary">View Details</a>
+      </div>
+    </div>
+    <a href="product.html" class="btn-primary">Browse Full Collection</a>
   </section>
 
   <footer>
-    <p>&copy; 2025 Erste Maison - Luxury Home Decor</p>
+    <div class="footer-content">
+      <p>&copy; 2025 Erste Maison. All rights reserved.</p>
+      <div class="social-icons">
+        <a href="#"><img src="images/instagram.svg" alt="Instagram"></a>
+        <a href="#"><img src="images/facebook.svg" alt="Facebook"></a>
+        <a href="#"><img src="images/twitter.svg" alt="Twitter"></a>
+      </div>
+    </div>
   </footer>
 
   <script src="index.js"></script>
