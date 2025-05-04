@@ -1,4 +1,231 @@
-</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Erste Maison</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <meta name="description" content="Get in touch with Erste Maison - luxury home decor for the modern home.">
+</head>
+<body>
+    <div class="loader">
+        <div class="loader-logo">
+            <span>E</span>
+            <span>M</span>
+        </div>
+    </div>
+
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <a href="index.html">Erste Maison</a>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#featured-products">Shop</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-icons">
+                <a href="#" class="search-toggle"><i class="fas fa-search"></i></a>
+                <a href="cart.html" class="cart-icon"><i class="fas fa-shopping-bag"></i><span class="cart-count">0</span></a>
+                <button class="mobile-menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+        <div class="search-overlay">
+            <div class="container">
+                <form class="search-form">
+                    <input type="text" placeholder="Search for products..." autocomplete="off">
+                    <button type="submit"><i class="fas fa-search"></i></button>
+                </form>
+                <button class="search-close"><i class="fas fa-times"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <div class="mobile-menu">
+        <div class="container">
+            <ul class="mobile-nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#featured-products">Shop</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <main>
+        <section class="contact-hero">
+            <div class="container">
+                <h1 class="page-title fade-in">Contact Us</h1>
+                <p class="page-subtitle fade-in">We'd love to hear from you. Get in touch with our team.</p>
+            </div>
+        </section>
+
+        <section class="contact-section">
+            <div class="container">
+                <div class="contact-grid">
+                    <div class="contact-form-container">
+                        <h2>Send a Message</h2>
+                        <form class="contact-form" id="contact-form">
+                            <div class="form-group">
+                                <label for="name">Full Name</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone Number (Optional)</label>
+                                <input type="tel" id="phone" name="phone">
+                            </div>
+                            <div class="form-group">
+                              <label for="subject">Subject</label>
+                                <select id="subject" name="subject" required>
+                                    <option value="" disabled selected>Select a subject</option>
+                                    <option value="order">Order Inquiry</option>
+                                    <option value="product">Product Question</option>
+                                    <option value="return">Return/Exchange</option>
+                                    <option value="feedback">Feedback</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" name="message" rows="5" required></textarea>
+                            </div>
+                            <div class="form-group form-checkbox">
+                                <input type="checkbox" id="newsletter" name="newsletter">
+                                <label for="newsletter">Subscribe to our newsletter to receive updates and exclusive offers</label>
+                            </div>
+                            <button type="submit" class="btn primary-btn">Send Message</button>
+                        </form>
+                        <div class="form-success-message" id="form-success">
+                            <i class="fas fa-check-circle"></i>
+                            <h3>Thank you for your message!</h3>
+                            <p>We've received your inquiry and will get back to you as soon as possible.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-info-container">
+                        <div class="contact-info-card">
+                            <h2>Contact Information</h2>
+                            <div class="contact-info-item">
+                                <div class="icon">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div class="details">
+                                    <h3>Address</h3>
+                                    <p>123 Design Street<br>Creativeville, CA 90210<br>United States</p>
+                                </div>
+                            </div>
+                            <div class="contact-info-item">
+                                <div class="icon">
+                                    <i class="fas fa-phone"></i>
+                                </div>
+                                <div class="details">
+                                    <h3>Phone</h3>
+                                    <p>+1 (800) 123-4567<br>Monday-Friday: 9am-6pm EST</p>
+                                </div>
+                            </div>
+                            <div class="contact-info-item">
+                                <div class="icon">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div class="details">
+                                    <h3>Email</h3>
+                                    <p>hello@erstemaison.com<br>support@erstemaison.com</p>
+                                </div>
+                            </div>
+                            <div class="contact-social">
+                                <h3>Follow Us</h3>
+                                <div class="social-icons">
+                                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                    <a href="#"><i class="fab fa-instagram"></i></a>
+                                    <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                                    <a href="#"><i class="fab fa-twitter"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-hours">
+                            <h3>Store Hours</h3>
+                            <div class="hours-item">
+                                <span>Monday - Friday</span>
+                                <span>10:00 AM - 7:00 PM</span>
+                            </div>
+                            <div class="hours-item">
+                                <span>Saturday</span>
+                                <span>11:00 AM - 6:00 PM</span>
+                            </div>
+                            <div class="hours-item">
+                                <span>Sunday</span>
+                                <span>12:00 PM - 5:00 PM</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="map-section">
+            <div class="map-container">
+                <!-- Replace with actual map embed if needed -->
+                <div class="placeholder-map">
+                    <img src="/api/placeholder/1920/400" alt="Location map">
+                    <div class="map-overlay">
+                        <div class="map-marker">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="faq-section">
+            <div class="container">
+                <h2 class="section-title">Frequently Asked Questions</h2>
+                <div class="faq-container">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>How long does shipping take?</h3>
+                            <span class="faq-icon"><i class="fas fa-plus"></i></span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Standard shipping typically takes 5-7 business days within the continental United States. Express shipping options (2-3 business days) are also available at checkout.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>What is your return policy?</h3>
+                            <span class="faq-icon"><i class="fas fa-plus"></i></span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>We offer a 30-day return policy for all unused items in their original packaging. Please see our Returns & Exchanges page for more details on the process.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Do you offer international shipping?</h3>
+                            <span class="faq-icon"><i class="fas fa-plus"></i></span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Yes, we ship to many international destinations. Shipping costs and delivery times vary by location. International orders may be subject to import duties and taxes.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>How can I track my order?</h3>
+                            <span class="faq-icon"><i class="fas fa-plus"></i></span>
+                            </div>
                         <div class="faq-answer">
                             <p>Once your order has shipped, you will receive a confirmation email with a tracking number. You can use this number to track your package on our website or the carrier's site.</p>
                         </div>
