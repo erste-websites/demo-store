@@ -1,75 +1,42 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Erste Maison | Luxury Home Decor</title>
-  <link rel="stylesheet" href="styles.css" />
-  <script defer src="index.js"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Erste Maison</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="overlay">
-      <div class="hero-text">
-        <h1>Erste Maison</h1>
-        <p>Elevate Your Space with Timeless Luxury</p>
-        <a href="#products" class="btn">Shop Collection</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Navigation -->
-  <header class="navbar">
-    <div class="logo">Erste Maison</div>
+  <header>
+    <div class="logo"><h1>Erste Maison</h1></div>
     <nav>
       <ul>
-        <li><a href="#products">Shop</a></li>
-        <li><a href="about.html">About</a></li>
+        <li><a href="index.html">Home</a></li>
         <li><a href="contact.html">Contact</a></li>
         <li><a href="cart.html">Cart</a></li>
       </ul>
     </nav>
   </header>
 
-  <!-- Featured Products -->
-  <section id="products" class="section">
-    <h2 class="section-title">Featured Products</h2>
-    <div class="product-grid">
-      <!-- Repeat this block for 9 products -->
-      <div class="product-card">
-        <img src="images/product1.jpg" alt="Crystal Chandelier">
-        <h3>Crystal Chandelier</h3>
-        <p class="price">$2,500</p>
-        <a href="product1.html" class="btn small">View Product</a>
-      </div>
-      <div class="product-card">
-        <img src="images/product2.jpg" alt="Marble Coffee Table">
-        <h3>Marble Coffee Table</h3>
-        <p class="price">$1,800</p>
-        <a href="product2.html" class="btn small">View Product</a>
-      </div>
-      <!-- Add more product-card divs for products 3–9 -->
+  <section class="product-grid">
+    <div class="product" onclick="location.href='product.html?id=1'">
+      <img src="images/chandelier.jpg" alt="Chandelier">
+      <h3>Crystal Chandelier</h3>
+      <p>$2500</p>
     </div>
+    <div class="product" onclick="location.href='product.html?id=2'">
+      <img src="images/vase.jpg" alt="Marble Vase">
+      <h3>Marble Vase</h3>
+      <p>$1500</p>
+    </div>
+    <!-- Add more products similarly -->
   </section>
 
-  <!-- Newsletter + Chatbot -->
-  <section class="cta">
-    <h3>Stay Updated</h3>
-    <p>Join our exclusive list and receive personalized offers and decor tips.</p>
-    <form id="newsletter">
-      <input type="email" placeholder="Enter your email" required>
-      <button type="submit" class="btn">Subscribe</button>
-    </form>
-    <p style="margin-top: 1rem;">Chat with our AI stylist below.</p>
-    <!-- Chatbot placeholder -->
-    <div id="chatbot-container"><!-- Lyro embed goes here --></div>
-  </section>
-
-  <!-- Footer -->
   <footer>
-    <p>&copy; 2025 Erste Maison. Designed for luxury living.</p>
+    <p>&copy; 2025 Erste Maison - Luxury Home Decor</p>
   </footer>
+
+  <script src="index.js"></script>
 </body>
 </html>
