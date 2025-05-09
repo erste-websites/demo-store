@@ -66,13 +66,13 @@ function renderProducts() {
     const card = document.createElement('div');
     card.classList.add('product-card');
 
-    card.innerHTML = 
+    card.innerHTML = '
       <img src="${product.image}" alt="${product.name}">
       <h3>${product.name}</h3>
       <p>${product.description}</p>
       <p><strong>$${product.price}</strong></p>
       <button class="btn" onclick="addToCart(${product.id})">Add to Cart</button>
-    ;
+    ';
 
     container.appendChild(card);
   });
