@@ -52,7 +52,7 @@ function addToCart(productId) {
   } else {
     cart.push({ ...product, quantity: 1 });
   }
-
+  {
   saveCart(cart);
   alert('${product.name} added to cart!');
 }
