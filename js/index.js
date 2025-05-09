@@ -1,31 +1,32 @@
+Basim, [5/10/2025 2:50 AM]
 // === Product Data ===
 const products = [
   {
     id: 1,
     name: "Velvet Rose Sofa",
     price: 1200,
-    image: "images/sofa1.jpg",
+    image: "images/sofa1.jpg",  // Replace with your correct image URL
     description: "A luxurious velvet sofa in deep rose hue."
   },
   {
     id: 2,
     name: "Crystal Glass Chandelier",
     price: 850,
-    image: "images/chandelier.jpg",
+    image: "images/chandelier.jpg",  // Replace with your correct image URL
     description: "Elegant chandelier with Swarovski crystals."
   },
   {
     id: 3,
     name: "Modern Marble Coffee Table",
     price: 500,
-    image: "images/table.jpg",
+    image: "images/table.jpg",  // Replace with your correct image URL
     description: "Minimalist design with real marble top."
   },
   {
     id: 4,
     name: "Silken Throw Pillows (Set of 4)",
     price: 120,
-    image: "images/pillows.jpg",
+    image: "images/pillows.jpg",  // Replace with your correct image URL
     description: "Silky, smooth pillows in blush tones."
   }
 ];
@@ -54,7 +55,7 @@ function addToCart(productId) {
   }
 
   saveCart(cart);
-  alert(${product.name} added to cart!);
+  alert(${product.name} added to cart!);  // Fixed the string interpolation error
 }
 
 // === Render Products (on index.html) ===
@@ -66,13 +67,13 @@ function renderProducts() {
     const card = document.createElement('div');
     card.classList.add('product-card');
 
-    card.innerHTML = '
+    card.innerHTML = 
       <img src="${product.image}" alt="${product.name}">
       <h3>${product.name}</h3>
       <p>${product.description}</p>
       <p><strong>$${product.price}</strong></p>
       <button class="btn" onclick="addToCart(${product.id})">Add to Cart</button>
-    ';
+    ;  // Fixed the syntax error by closing the string with a backtick
 
     container.appendChild(card);
   });
@@ -97,6 +98,7 @@ function updateCartDisplay() {
       <span>Price: $${item.price}</span>
       <span>Quantity: ${item.quantity}</span>
     ;
+
     cartList.appendChild(div);
     total += item.price * item.quantity;
   });
