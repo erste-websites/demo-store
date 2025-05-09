@@ -1,89 +1,138 @@
+Basim, [5/10/2025 1:36 AM]
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Erste Maison | Luxury Home Decor</title>
-  <link rel="stylesheet" href="css/styles.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Erste Maison | Luxury Home Decor</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <meta name="description" content="Erste Maison - Premium home decor and accessories for the modern home.">
 </head>
 <body>
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <a href="index.html">Erste Maison</a>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#featured-products">Collection</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-icons">
+                <a href="cart.html" class="cart-icon"><i class="fas fa-shopping-bag"></i><span class="cart-count">0</span></a>
+                <button class="mobile-menu-toggle">
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+        </div>
+    </header>
 
-  <!-- Hero Section -->
-  <header class="hero">
-    <div class="container">
-      <h1>Erste Maison</h1>
-      <p>Elevate your home with timeless luxury</p>
+    <main>
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="fade-in">Living Immaculate</h1>
+                    <p class="fade-in">Curated luxury for your modern home.</p>
+                    <a href="#featured-products" class="btn primary-btn fade-in">Shop Now</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="featured-products" class="featured-products">
+            <div class="container">
+                <h2 class="section-title">Featured Collection</h2>
+                <div class="category-filters">
+                    <button class="category-btn active" data-category="all">All</button>
+                    <button class="category-btn" data-category="lighting">Lighting</button>
+                    <button class="category-btn" data-category="furniture">Furniture</button>
+                    <button class="category-btn" data-category="decor">Decor</button>
+                </div>
+                <div class="products-grid" id="products-container">
+                    <!-- Products will be dynamically loaded here -->
+                </div>
+            </div>
+        </section>
+
+        <section class="promotion">
+            <div class="container">
+                <div class="promotion-content">
+                    <h2>New Season Collection</h2>
+                    <p>Discover our latest arrivals designed to transform your space.</p>
+                    <a href="#featured-products" class="btn secondary-btn">View Collection</a>
+                </div>
+            </div>
+        </section>
+        <section id="about" class="about">
+            <div class="container">
+                <div class="about-grid">
+                    <div class="about-image">
+                        <img src="/api/placeholder/800/600" alt="Erste Maison interior" />
+                    </div>
+                    <div class="about-content">
+                        <h2 class="section-title">About Erste Maison</h2>
+                        <p>Founded on the principles of exceptional design and quality craftsmanship, Erste Maison brings luxury into everyday living. Our curated collections blend timeless elegance with contemporary aesthetics.</p>
+                        <p>Each piece is thoughtfully selected to elevate your space, creating environments that inspire and comfort. From statement furniture to delicate accessories, our products are designed to transform houses into homes.</p>
+                        <a href="contact.html" class="btn text-btn">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+Basim, [5/10/2025 1:36 AM]
+<footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Erste Maison</h3>
+                    <p>Premium home decor for the modern lifestyle. Elevate your space with our curated collection of luxury pieces.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-pinterest-p"></i></a>
     </div>
-  </header>
+                </div>
+                <div class="footer-col">
+                    <h3>Navigation</h3>
+                    <ul>
+                        <li><a href="index.html">Erste Maison</a></li>
+                        <li><a href="#featured-products">Collection</a></li>
+                        <li><a href="cart.html">Cart</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact Us</h3>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Design Street, Creativeville</li>
+                        <li><i class="fas fa-phone"></i> +1 (800) 123-4567</li>
+                        <li><i class="fas fa-envelope"></i> hello@erstemaison.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Erste Maison. All rights reserved.
+                    <br></br>
+                (This is a demo website.)
+                </p>
+                <div class="payment-icons">
+                    <i class="fab fa-cc-visa"></i>
+                    <i class="fab fa-cc-mastercard"></i>
+                    <i class="fab fa-cc-amex"></i>
+                    <i class="fab fa-cc-paypal"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
 
-  <!-- About Section -->
-  <section id="about">
-    <div class="container">
-      <h2>Our Philosophy</h2>
-      <p>At Erste Maison, we believe luxury is in the detail. Every piece we offer is hand-picked to bring beauty, sophistication, and timeless charm to your home.</p>
-    </div>
-  </section>
+    <!-- Chatbot Integration (Tidio placeholder) -->
+    <div id="tidio-chat-placeholder"></div>
 
-  <!-- Featured Products -->
-  <section id="home-products">
-    <div class="container">
-      <h2>Featured Products</h2>
-
-      <!-- Loading and Error Messages -->
-      <div id="home-products-loading">Loading products...</div>
-      <div id="home-products-error" style="display: none; color: red;">Failed to load products. Please try again later.</div>
-
-      <!-- Product Grid (Dynamic) -->
-      <div id="product-grid" class="product-grid">
-        <!-- JS will inject products here -->
-      </div>
-    </div>
-  </section>
-
-  <!-- Product Template -->
-  <template id="product-card-template">
-    <a class="product-card" href="product.html?id=" data-id="">
-      <img src="" alt="" class="product-img" />
-      <div class="product-info">
-        <h3 class="product-title">Product Name</h3>
-        <p class="product-price">Price</p>
-      </div>
-    </a>
-  </template>
-
-  <!-- Testimonials -->
-  <section id="testimonials">
-    <div class="container">
-      <h2>What Our Clients Say</h2>
-      <div class="testimonial">
-        <p>"Erste Maison transformed my living space. The quality and design are unmatched!"</p>
-        <h4>– Sarah L.</h4>
-      </div>
-      <div class="testimonial">
-        <p>"Luxury that speaks volumes. I'm in love with every piece I ordered."</p>
-        <h4>– James T.</h4>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact -->
-  <section id="contact">
-    <div class="container">
-      <h2>Get in Touch</h2>
-      <p>Ready to elevate your space? Contact us for exclusive offers and personalized recommendations.</p>
-      <a href="mailto:hello@erstemaison.com" class="contact-btn">Email Us</a>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer>
-    <div class="container">
-      <p>&copy; 2025 Erste Maison. All rights reserved.</p>
-    </div>
-  </footer>
-
-  <!-- Script -->
-  <script src="index.js"></script>
-
+    <script src="js/index.js"></script>
 </body>
 </html>
