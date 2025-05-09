@@ -1,4 +1,3 @@
-Basim, [5/10/2025 1:36 AM]
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,7 +16,7 @@ Basim, [5/10/2025 1:36 AM]
             </div>
             <nav>
                 <ul class="nav-links">
-                    <li><a href="#featured-products">Collection</a></li>
+                    <li><a href="#featured-products">Products/a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
@@ -38,7 +37,7 @@ Basim, [5/10/2025 1:36 AM]
                 <div class="hero-content">
                     <h1 class="fade-in">Living Immaculate</h1>
                     <p class="fade-in">Curated luxury for your modern home.</p>
-                    <a href="#featured-products" class="btn primary-btn fade-in">Shop Now</a>
+                    <a href="#featured-product" class="btn primary-btn fade-in">Shop Now</a>
                 </div>
             </div>
         </section>
@@ -53,8 +52,16 @@ Basim, [5/10/2025 1:36 AM]
                     <button class="category-btn" data-category="decor">Decor</button>
                 </div>
                 <div class="products-grid" id="products-container">
-                    <!-- Products will be dynamically loaded here -->
-                </div>
+                  <template id="product-template">
+                    <a class="product-card" href="product.html?id=" data-id="">
+                      <img src="" alt="" class="product-img" />
+                      <div class="product-info">
+                        <h3 class="product-title">Product Name</h3>
+                        <p class="product-price">Price</p>
+                        </div>
+                       </a>
+                     </template>
+                  </div>
             </div>
         </section>
 
