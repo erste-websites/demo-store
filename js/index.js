@@ -59,7 +59,7 @@ function addToCart(productId) {
 
 // === Render Products (on product.html) ===
 function renderProducts() {
-  const container = document.getElementById('product-container');
+  const container = document.getElementById('products-container');
   if (!container) return;
 
   products.forEach(product => {
@@ -83,7 +83,7 @@ function updateCartDisplay() {
   const cartList = document.getElementById('cart-list');
   const totalEl = document.getElementById('total');
 
-  if (!cartList  !totalEl) return;
+  if (!cartList || !totalEl) return;
 
   const cart = getCart();
   cartList.innerHTML = '';
@@ -111,12 +111,12 @@ function checkout() {
     alert('Your cart is empty!');
   } else {
     alert('Proceeding to checkout...');
-    // Redirect to payment or confirmation here
+    // Redirect to payment or confirmation page here
   }
 }
 
 // === Init Calls ===
 document.addEventListener('DOMContentLoaded', () => {
-  renderProducts();       // Only works on product.html
-  updateCartDisplay();    // Only works on cart.html
+  renderProducts();       // For products.html
+  updateCartDisplay();    // For cart.html
 });
