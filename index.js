@@ -1,4 +1,3 @@
-Basim, [5/10/2025 2:13 AM]
 // === Product Data ===
 const products = [
   {
