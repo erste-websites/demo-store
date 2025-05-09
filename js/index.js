@@ -1,4 +1,3 @@
-Basim, [5/10/2025 2:50 AM]
 // === Product Data ===
 const products = [
   {
@@ -55,7 +54,6 @@ function addToCart(productId) {
   }
 
   saveCart(cart);
-  alert('${product.name} added to cart!');  // Fixed the string interpolation error
 }
 
 // === Render Products (on index.html) ===
