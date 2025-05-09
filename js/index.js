@@ -55,7 +55,7 @@ function addToCart(productId) {
   }
 
   saveCart(cart);
-  alert(${product.name} added to cart!);  // Fixed the string interpolation error
+  alert('${product.name} added to cart!');  // Fixed the string interpolation error
 }
 
 // === Render Products (on index.html) ===
