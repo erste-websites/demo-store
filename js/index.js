@@ -52,12 +52,12 @@ function addToCart(productId) {
   } else {
     cart.push({ ...product, quantity: 1 });
   }
-  {
+
   saveCart(cart);
-  alert('${product.name} added to cart!');
+  alert(${product.name} added to cart!);
 }
 
-// === Render Products (on product.html) ===
+// === Render Products (on index.html) ===
 function renderProducts() {
   const container = document.getElementById('products-container');
   if (!container) return;
@@ -111,12 +111,12 @@ function checkout() {
     alert('Your cart is empty!');
   } else {
     alert('Proceeding to checkout...');
-    // Redirect to payment or confirmation page here
+    // Redirect to payment or confirmation here
   }
 }
 
 // === Init Calls ===
 document.addEventListener('DOMContentLoaded', () => {
-  renderProducts();       // For products.html
-  updateCartDisplay();    // For cart.html
+  renderProducts();       // Only works on index.html
+  updateCartDisplay();    // Only works on cart.html
 });
