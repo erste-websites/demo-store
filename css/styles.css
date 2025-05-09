@@ -357,6 +357,10 @@ textarea.form-input {
 /* ---------- 5. Header & Navigation ---------- */
 .header {
     position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
     top: 0;
     left: 0;
     width: 100%;
@@ -390,6 +394,8 @@ textarea.form-input {
 
 .nav-list {
     display: flex;
+    gap: 2rem;
+    list-style: none;
     align-items: center;
 }
 
