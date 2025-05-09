@@ -54,7 +54,7 @@ function addToCart(productId) {
   }
 
   saveCart(cart);
-  alert(${product.name} added to cart!);
+  alert('${product.name} added to cart!');
 }
 
 // === Render Products (on product.html) ===
