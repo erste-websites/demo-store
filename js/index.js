@@ -51,8 +51,7 @@ function addToCart(productId) {
     existing.quantity += 1;
   } else {
     cart.push({ ...product, quantity: 1 });
-  }
-
+  } {
   saveCart(cart);
 }
 
