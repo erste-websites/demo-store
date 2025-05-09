@@ -1,3 +1,4 @@
+Basim, [5/10/2025 2:13 AM]
 // === Product Data ===
 const products = [
   {
@@ -32,7 +33,7 @@ const products = [
 
 // === Utility Functions ===
 function getCart() {
-  return JSON.parse(localStorage.getItem('cart')) || [];
+  return JSON.parse(localStorage.getItem('cart'))  [];
 }
 
 function saveCart(cart) {
@@ -83,7 +84,7 @@ function updateCartDisplay() {
   const cartList = document.getElementById('cart-list');
   const totalEl = document.getElementById('total');
 
-  if (!cartList || !totalEl) return;
+  if (!cartList  !totalEl) return;
 
   const cart = getCart();
   cartList.innerHTML = '';
