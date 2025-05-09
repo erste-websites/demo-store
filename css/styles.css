@@ -496,6 +496,10 @@ textarea.form-input {
     font-size: 0.9rem;
 }
 
+.footer-bottom.p {
+    color: var(--primary-color);
+}
+
 /* ---------- 7. Home Page ---------- */
 .hero {
     height: 90vh;
