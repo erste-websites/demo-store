@@ -28,7 +28,43 @@ const products = [
   }
 ];
 
-// === Load Product Detail (on product.html) ===
+// === Capitalize First Letter ===
+function capitalize(str) {
+  return str.charAt(0).toUpperCase() + str.slice(1);
+}
+
+// === Home Page: Render Products ===
+function renderProducts(filter = "all") {
+  const container = document.getElementById("products-container");
+  const template = document.getElementById("product-template");
+
+  if (!container || !template) return;
+
+  container.innerHTML = "";
+
+  const filteredProducts = filter === "all"
+    ? products
+    : products.filter(p => p.category === filter);
+
+  filteredProducts.forEach(product => {
+    const clone = template.content.cloneNode(true);
+    const card = clone.querySelector(".product-card");
+    const img = clone.querySelector(".product-img");
+    const title = clone.querySelector(".product-title");
+    const price = clone.querySelector(".product-price");
+
+    card.href = `product.html?id=${product.id}`;
+    card.setAttribute("data-id", product.id);
+    img.src = product.image;
+    img.alt = product.name;
+    title.textContent = product.name;
+    price.textContent = `$${product.price}`;
+
+    container.appendChild(clone);
+  });
+}
+
+// === Product Page: Load Product Detail ===
 function loadProductDetail() {
   const urlParams = new URLSearchParams(window.location.search);
   const productId = parseInt(urlParams.get('id'));
@@ -38,8 +74,8 @@ function loadProductDetail() {
   const errorEl = document.getElementById('product-error');
 
   if (!product) {
-    loadingEl.style.display = 'none';
-    errorEl.style.display = 'block';
+    if (loadingEl) loadingEl.style.display = 'none';
+    if (errorEl) errorEl.style.display = 'block';
     return;
   }
 
@@ -57,32 +93,22 @@ function loadProductDetail() {
 
   const thumbContainer = document.getElementById('product-thumbnails');
   const template = document.getElementById('thumbnail-template');
+  if (thumbContainer && template) {
+    thumbContainer.innerHTML = "";
+    const thumb = template.content.cloneNode(true);
+    thumb.querySelector("img").src = product.image;
+    thumb.querySelector(".thumbnail").dataset.src = product.image;
+    thumbContainer.appendChild(thumb);
+  }
 
-  thumbContainer.innerHTML = '';
-  const clone = template.content.cloneNode(true);
-  clone.querySelector('.thumbnail img').src = product.image;
-  clone.querySelector('.thumbnail').setAttribute('data-src', product.image);
-  thumbContainer.appendChild(clone);
-
-  const btn = document.getElementById('add-to-cart-btn');
-  btn.onclick = () => {
-    addToCart(product.id);
+  document.getElementById('add-to-cart-btn').onclick = () => {
+    alert(`Product ${product.id} added to cart!`);
   };
 
   loadingEl.style.display = 'none';
 }
 
-// === Capitalize First Letter ===
-function capitalize(str) {
-  return str.charAt(0).toUpperCase() + str.slice(1);
-}
-
-// === Add to Cart (placeholder) ===
-function addToCart(id) {
-  alert(`Product ${id} added to cart!`);
-}
-
-// === Tab Switching ===
+// === Tab Switching (for product.html) ===
 function openTab(evt, tabName) {
   const tabcontent = document.getElementsByClassName("tabcontent");
   for (let i = 0; i < tabcontent.length; i++) {
@@ -99,8 +125,20 @@ function openTab(evt, tabName) {
 }
 
 // === Init ===
-document.addEventListener('DOMContentLoaded', () => {
-  if (window.location.pathname.includes('product.html')) {
+document.addEventListener("DOMContentLoaded", () => {
+  if (document.getElementById("products-container")) {
+    renderProducts();
+
+    document.querySelectorAll(".category-btn").forEach(btn => {
+      btn.addEventListener("click", () => {
+        document.querySelectorAll(".category-btn").forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
+        renderProducts(btn.dataset.category);
+      });
+    });
+  }
+
+  if (window.location.pathname.includes("product.html")) {
     loadProductDetail();
   }
 });
