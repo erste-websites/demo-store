@@ -4,29 +4,33 @@ const products = [
     id: 1,
     name: "Velvet Rose Sofa",
     price: 1200,
-    image: "images/sofa1.jpg",  // Replace with your correct image URL
-    description: "A luxurious velvet sofa in deep rose hue."
+    image: "images/sofa1.jpg",
+    description: "A luxurious velvet sofa in deep rose hue.",
+    category: "furniture"
   },
   {
     id: 2,
     name: "Crystal Glass Chandelier",
     price: 850,
-    image: "images/chandelier.jpg",  // Replace with your correct image URL
-    description: "Elegant chandelier with Swarovski crystals."
+    image: "images/chandelier.jpg",
+    description: "Elegant chandelier with Swarovski crystals.",
+    category: "lighting"
   },
   {
     id: 3,
     name: "Modern Marble Coffee Table",
     price: 500,
-    image: "images/table.jpg",  // Replace with your correct image URL
-    description: "Minimalist design with real marble top."
+    image: "images/table.jpg",
+    description: "Minimalist design with real marble top.",
+    category: "furniture"
   },
   {
     id: 4,
     name: "Silken Throw Pillows (Set of 4)",
     price: 120,
-    image: "images/pillows.jpg",  // Replace with your correct image URL
-    description: "Silky, smooth pillows in blush tones."
+    image: "images/pillows.jpg",
+    description: "Silky, smooth pillows in blush tones.",
+    category: "decor"
   }
 ];
 
@@ -51,32 +55,34 @@ function addToCart(productId) {
     existing.quantity += 1;
   } else {
     cart.push({ ...product, quantity: 1 });
-  } {
+  }
+
   saveCart(cart);
+  alert(`${product.name} added to cart!`);
 }
 
-// === Render Products (on index.html) ===
+// === Render Products ===
 function renderProducts() {
   const container = document.getElementById('products-container');
-  if (!container) return;
+  const template = document.getElementById('product-template');
+  if (!container || !template) return;
 
   products.forEach(product => {
-    const card = document.createElement('div');
-    card.classList.add('product-card');
+    const clone = template.content.cloneNode(true);
+    const card = clone.querySelector('.product-card');
 
-    card.innerHTML =' 
-      <img src="${product.image}" alt="${product.name}">
-      <h3>${product.name}</h3>
-      <p>${product.description}</p>
-      <p><strong>$${product.price}</strong></p>
-      <button class="btn" onclick="addToCart(${product.id})">Add to Cart</button>
-    ';  // Fixed the syntax error by closing the string with a backtick
+    card.href = `product.html?id=${product.id}`;
+    card.setAttribute('data-id', product.id);
+    card.querySelector('.product-img').src = product.image;
+    card.querySelector('.product-img').alt = product.name;
+    card.querySelector('.product-title').textContent = product.name;
+    card.querySelector('.product-price').textContent = `$${product.price}`;
 
-    container.appendChild(card);
+    container.appendChild(clone);
   });
 }
 
-// === Render Cart (on cart.html) ===
+// === Render Cart ===
 function updateCartDisplay() {
   const cartList = document.getElementById('cart-list');
   const totalEl = document.getElementById('total');
@@ -90,32 +96,31 @@ function updateCartDisplay() {
   cart.forEach(item => {
     const div = document.createElement('div');
     div.className = 'cart-item';
-    div.innerHTML = 
+    div.innerHTML = `
       <span>${item.name}</span>
       <span>Price: $${item.price}</span>
       <span>Quantity: ${item.quantity}</span>
-    ;
-
+    `;
     cartList.appendChild(div);
     total += item.price * item.quantity;
   });
 
-  totalEl.textContent = Total: $${total};
+  totalEl.textContent = `Total: $${total}`;
 }
 
-// === Checkout Button Handler ===
+// === Checkout ===
 function checkout() {
   const cart = getCart();
   if (cart.length === 0) {
     alert('Your cart is empty!');
   } else {
     alert('Proceeding to checkout...');
-    // Redirect to payment or confirmation here
+    // Add checkout logic here
   }
 }
 
-// === Init Calls ===
+// === Init ===
 document.addEventListener('DOMContentLoaded', () => {
-  renderProducts();       // Only works on index.html
-  updateCartDisplay();    // Only works on cart.html
+  renderProducts();
+  updateCartDisplay();
 });
